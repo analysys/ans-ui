@@ -1,0 +1,41 @@
+$tooltip-wrapper-name: $lib-name + "-tooltip";
+
+$tooltip-dark-bg-color: rgba($title-color-light, 0.95);
+$tooltip-dark-text-color: $background-color-disabled;
+
+$tooltip-light-bg-color: $background-color-base;
+$tooltip-light-border-color: $border-color-base;
+$tooltip-light-text-color: $title-color-light;
+
+.#{$tooltip-wrapper-name} {
+  padding: 8px;
+  border-radius: 4px;
+  &.dark {
+    background: $tooltip-dark-bg-color;
+    box-shadow: $box-shadow-base;
+    .tooltip-content {
+      color: $tooltip-dark-text-color;
+    }
+  }
+  &.light {
+    background: $tooltip-light-bg-color;
+    border: 1px solid $tooltip-light-border-color;
+    box-shadow: $box-shadow-base;
+    .tooltip-content {
+      color: $tooltip-light-text-color;
+    }
+  }
+  .tooltip-content {
+    font-size: 12px;
+    line-height: 1;
+    text-align: justify;
+  }
+  &.large {
+    padding: 12px 16px;
+    border-radius: 6px;
+    .tooltip-content {
+      font-size: 13px;
+      line-height: 21px;
+    }
+  }
+}
