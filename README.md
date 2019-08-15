@@ -1,19 +1,20 @@
 # Ans UI
 
-基于 Vue 开发的易观前端组件库，https://analysys.github.io/ans-ui_docs/#/
+> A Vue-based UI component library for analysys
 
-## 安装
+[Documentation](https://analysys.github.io/ans-ui_docs/#/)
+
+## Installation
 
 ```sh
-# 使用 yarn 安装
 yarn add ans-ui
-# 或者使用 npm 安装
+# or
 npm i ans-ui
 ```
 
-## 使用
+## Usage
 
-全部引入
+Import all components
 
 ```javascript
 import Vue from 'vue'
@@ -23,7 +24,7 @@ import 'ans-ui/lib/ans-ui.min.css'
 Vue.use(AnsUI)
 ```
 
-按需引入
+Or import specified component
 
 ```javascript
 import Vue from 'vue'
@@ -33,21 +34,24 @@ import 'ans-ui/lib/ans-ui.min.css'
 Vue.use(xButton)
 ```
 
-## 开发
+## Development
 
-先全局安装 parcel-bundler
+Install parcel-bundler globally
 
 ```sh
-# 使用 yarn 安装
 yarn global add parcel-bundler
-# 或者使用 npm 安装
+# or
 npm i -g parcel-bundler
 ```
 
-再启动命令
+Then
 
 ```sh
 yarn dev
 # or
 npm run dev
 ```
+
+## License
+
+MIT
