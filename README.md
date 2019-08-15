@@ -1,6 +1,6 @@
 # Ans UI
 
-> A Vue-based UI component library for analysys
+> A Vue-based UI component library
 
 [Documentation](https://analysys.github.io/ans-ui_docs/#/)
 
