@@ -17,3 +17,8 @@
   - 修复多级表头时数据切割索引不对的 bug
 - Datepicker
   - 修复星期显示国际化失效的 bug
+
+#### 优化
+
+- Tooltip
+  - maxWidth 的默认值改为 370px

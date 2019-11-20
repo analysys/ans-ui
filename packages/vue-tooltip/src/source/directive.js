@@ -21,7 +21,7 @@ export default {
       placement,
       triggerEvent: click ? 'click' : 'mouseenter',
       theme: light ? 'light' : 'dark',
-      maxWidth: '200px',
+      maxWidth: '370px',
       positionFixed: !!fixed,
       viewport: !!viewport,
       large: !!large
