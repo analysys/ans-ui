@@ -50,9 +50,20 @@ export default {
       return this.select && this.select.multiple
     },
     displayText () {
-      return (this.visible && this.select && this.select.filterable && this.select.highlightMatchedText && this.select.keyword)
-        ? this.label.replace(this.select.keyword, `<span class="highlight">${this.select.keyword}</span>`)
-        : this.label
+      if (this.visible && this.select && this.select.filterable && this.select.highlightMatchedText && this.select.keyword) {
+        if (this.select.ignoreCase) {
+          const ll = this.label.toLowerCase()
+          const lk = this.select.keyword.toLowerCase()
+          const index = ll.indexOf(lk)
+          if (~index) {
+            const length = lk.length
+            return this.label.substr(0, index) + `<span class="highlight">${this.label.substr(index, length)}</span>` + this.label.substr(index + length)
+          }
+        } else {
+          return this.label.replace(this.select.keyword, `<span class="highlight">${this.select.keyword}</span>`)
+        }
+      }
+      return this.label
     }
   },
   methods: {
@@ -89,14 +100,21 @@ export default {
         const value = this.value
         let matchKeyword = false
         for (const prop of props) {
-          if (value && value[prop] && value[prop].toString().includes(keyword)) {
+          if (value && value[prop] && this.isPropIncludeKeyword(value[prop].toString(), keyword)) {
             matchKeyword = true
             break
           }
         }
         return matchKeyword
       } else {
-        return this.label.toString().includes(keyword)
+        return this.isPropIncludeKeyword(this.label.toString(), keyword)
+      }
+    },
+    isPropIncludeKeyword (prop, keyword) {
+      if (this.select.ignoreCase) {
+        return prop.toLowerCase().includes(keyword.toLowerCase())
+      } else {
+        return prop.includes(keyword)
       }
     }
   },
