@@ -644,9 +644,8 @@ export default class TableStore {
               }
             }
           } else {
-            startIndex = i
+            startIndex = Math.max(0, i - 2)
           }
-          startIndex = Math.max(0, startIndex - 2)
           findStart = true
         }
       } else {
@@ -659,9 +658,8 @@ export default class TableStore {
             }
             endIndex = notFixedColumns.indexOf(parent)
           } else {
-            endIndex = i
+            endIndex = i + 2
           }
-          endIndex += 2
           break
         }
       }

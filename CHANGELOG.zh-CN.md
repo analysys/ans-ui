@@ -10,3 +10,6 @@
   - 新增 ignore-case 属性
 
 #### Bug 修复
+
+- Table
+  - 修复多级表头时数据切割索引不对的 bug
