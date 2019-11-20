@@ -8,6 +8,8 @@
 
 - Select
   - Add ignore-case prop
+- Table
+  - TableColumn add min-width prop
 
 #### Bug fixes
 - Table

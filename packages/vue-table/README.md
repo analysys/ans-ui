@@ -70,6 +70,7 @@ type | 列的类型 | String | selection / expand | —
 label | 表头内容 | String | — | —
 prop | 表格内容对应的属性，支持多层访问：如 'user.address[0].city' | String | — | —
 width | 列宽，单位为 px(只支持数值型的格式，如 400) | Number / String | — | —
+min-width | 最小列宽，单位为 px(只支持数值型的格式，如 400) | Number / String | — | —
 fixed | 是否固定列，true 等价于 left | Boolean / String | true / left / right | false
 sortable | 对应列是否可以排序，如果设置为 'custom'，则代表用户希望自定义排序，需要监听 Table 的 on-sort-change 事件 | Boolean / String | true / false / 'custom' | false
 sort-method | 对数据进行排序的时候使用的方法，仅当 sortable 设置为 true 的时候有效，需返回一个数字，和 Array.sort 表现一致 | Function(cellA, cellB, rowA, rowB) | — | —

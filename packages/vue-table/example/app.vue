@@ -62,7 +62,8 @@
           v-for="(header, index) in detailTableHeaders"
           :fixed="index === 3 ? 'right' : index === 1 ? 'left' : false"
           :key="index"
-          width="300"
+          :min-width="index > 2 ? 400 : undefined"
+          :width="index <= 2 ? 200 : undefined"
           :label="header.label"
           :prop="header.prop">
         </x-table-column>

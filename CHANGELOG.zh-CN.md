@@ -8,6 +8,8 @@
 
 - Select
   - 新增 ignore-case 属性
+- Table
+  - TableColumn 新增 min-width 属性
 
 #### Bug 修复
 

@@ -32,12 +32,22 @@ const getDefaultColumn = (type, options) => {
   }
 
   if (column.width !== undefined) {
-    column.width = parseInt(column.width)
+    column.width = parseWidth(column.width)
   }
 
   column.currentWidth = column.width || column.minWidth
 
   return column
+}
+
+const parseWidth = (width) => {
+  if (width !== undefined) {
+    width = parseInt(width, 10)
+    if (isNaN(width)) {
+      width = null
+    }
+  }
+  return width
 }
 
 export default {
@@ -58,6 +68,9 @@ export default {
 
     // 列宽
     width: [Number, String],
+
+    // 最小列宽
+    minWidth: [Number, String],
 
     // 是否固定列，也可传字符串 `left` 或  `right`
     fixed: [Boolean, String],
@@ -132,7 +145,14 @@ export default {
 
     width (newVal) {
       if (this.columnConfig) {
-        this.columnConfig.width = typeof newVal === 'string' ? parseInt(newVal) : newVal
+        this.columnConfig.width = parseWidth(newVal)
+        this.owner.store.scheduleLayout()
+      }
+    },
+
+    minWidth (newVal) {
+      if (this.columnConfig) {
+        this.columnConfig.minWidth = parseWidth(newVal)
         this.owner.store.scheduleLayout()
       }
     },
@@ -165,6 +185,7 @@ export default {
       label: this.label,
       prop: this.prop,
       width: this.width,
+      minWidth: parseWidth(this.minWidth),
       fixed: this.fixed,
       sortable: this.sortable === '' ? true : this.sortable,
       sortMethod: this.sortMethod,
