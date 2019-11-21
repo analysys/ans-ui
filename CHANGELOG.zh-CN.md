@@ -13,6 +13,8 @@
 - Tooltip
   - triggerEvent 新增可选值 manual
   - 新增 reveal 属性
+- Timepicker
+  - 新增 step 属性
 
 #### Bug 修复
 

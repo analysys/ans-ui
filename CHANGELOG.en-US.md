@@ -13,6 +13,8 @@
 - Tooltip
   - Add new option manual for triggerEvent
   - Add reveal prop
+- Timepicker
+  - Add step prop
 
 #### Bug fixes
 
