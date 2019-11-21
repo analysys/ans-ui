@@ -21,6 +21,14 @@ export default {
     }
   },
   props: {
+    // 触发事件
+    triggerEvent: {
+      type: String,
+      validator (v) {
+        return ['click', 'mouseenter', 'manual'].includes(v)
+      },
+      default: 'mouseenter'
+    },
     // 提示文本
     content: String,
     // 主题
@@ -28,7 +36,9 @@ export default {
     // 提示框最大宽度
     maxWidth: String,
     // 是否启用大号 Tooltip
-    large: Boolean
+    large: Boolean,
+    // 当 triggerEvent 为 `manual` 的时候，控制 tooltip 是否显示
+    reveal: Boolean
   },
   computed: {
     contentStyles () {
@@ -45,6 +55,14 @@ export default {
       this.visible = false
     },
     update (options) {
+      if (options.triggerEvent === 'manual') {
+        if (options.reveal === false) {
+          return this.hide()
+        } else if (options.reveal === true) {
+          this.show()
+        }
+      }
+
       this.content = options.text
       this.theme = options.theme
       this.large = !!options.large
@@ -52,6 +70,11 @@ export default {
       if (this.visible) {
         this.updateElementHandler()
       }
+    }
+  },
+  mounted () {
+    if (this.triggerEvent === 'manual' && this.reveal) {
+      this.show()
     }
   }
 }

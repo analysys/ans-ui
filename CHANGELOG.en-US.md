@@ -10,6 +10,9 @@
   - Add ignore-case prop
 - Table
   - TableColumn add min-width prop
+- Tooltip
+  - Add new option manual for triggerEvent
+  - Add reveal prop
 
 #### Bug fixes
 

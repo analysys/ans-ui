@@ -46,8 +46,12 @@ export default {
         this._ttInstance.hide()
       }
     }
-    el.addEventListener(options.triggerEvent, el._appearHandler)
-    el.addEventListener('mouseleave', el._vanishHandler)
+    if (options.triggerEvent === 'manual') {
+      el._ttInstance = factory(options)
+    } else {
+      el.addEventListener(options.triggerEvent, el._appearHandler)
+      el.addEventListener('mouseleave', el._vanishHandler)
+    }
   },
 
   update (el, binding) {

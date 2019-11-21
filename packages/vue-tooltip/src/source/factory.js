@@ -6,6 +6,7 @@ const TooltipConstructor = Vue.extend(Tooltip)
 
 export default (options = {}) => {
   const {
+    triggerEvent,
     text = '',
     placement,
     theme,
@@ -13,10 +14,12 @@ export default (options = {}) => {
     el,
     positionFixed,
     viewport,
-    large
+    large,
+    reveal
   } = options
   const instance = new TooltipConstructor({
     propsData: {
+      triggerEvent,
       content: text,
       placement,
       theme,
@@ -24,7 +27,8 @@ export default (options = {}) => {
       reference: el,
       positionFixed: positionFixed,
       viewport: viewport,
-      large
+      large,
+      reveal
     }
   }).$mount()
   document.body.appendChild(instance.$el)
