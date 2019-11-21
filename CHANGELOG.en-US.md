@@ -28,6 +28,7 @@
 
 - Table
   - Fix index error that occurred when both data cutting and multilevel headers were used
+  - Fix dispaly error that table header was not displayed when there was no data
 - Datepicker
   - Fix week i18n
 - Timepicker

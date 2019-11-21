@@ -585,6 +585,9 @@ export default class TableStore {
 
     if (!states._slicedData || !states._slicedData.length) {
       states.data = []
+      states.renderedColumns = Object.freeze(states.columns)
+      states.renderedColColumns = Object.freeze(states.colColumns)
+      states.renderedColumnCount = states.renderedColColumns.length
       Vue.nextTick(() => {
         this.table.layout.notifyObservers('columns')
         this.table.debouncedCheckScrollable()
