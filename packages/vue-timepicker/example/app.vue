@@ -3,7 +3,7 @@
     <section class="demo-section">
       <h4>基础用法</h4>
       <div>
-        <x-timepicker></x-timepicker>
+        <x-timepicker @on-change="timeChange"></x-timepicker>
       </div>
     </section>
 
@@ -27,7 +27,6 @@
 
 <script>
 import { xTimepicker } from '../src/index'
-
 
 export default {
   name: 'app',

@@ -20,6 +20,8 @@
   - Fix index error that occurred when both data cutting and multilevel headers were used
 - Datepicker
   - Fix week i18n
+- Timepicker
+  - Fix on-change event
 
 #### Optimization
 

@@ -9,8 +9,8 @@
     :viewport="viewport"
     :popper-options="popperOptions"
     ref="timepickerPoptip"
-    @show="poperShow"
-    @hide="poperHide"
+    @on-show="poperShow"
+    @on-hide="poperHide"
   >
     <div slot="reference">
       <slot
