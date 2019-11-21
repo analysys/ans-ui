@@ -3,12 +3,12 @@
     <section class="demo-section">
       <h4>基本用法</h4>
       <div>
-        <x-form ref="formVal" :model="formVal" :rules="formRules" label-width="80" label-height="32">
+        <x-form ref="formVal" :model="formVal" :rules="formRules" label-width="80">
           <x-form-item prop="username" label="帐号">
-            <x-input v-model="formVal.username" placeholder="请输入帐号" style="width: 200px;"></x-input>
+            <x-input v-model="formVal.username" placeholder="请输入帐号" no-border style="width: 200px;"></x-input>
           </x-form-item>
           <x-form-item prop="passcode" label="密码">
-            <x-input v-model="formVal.passcode" type="password" placeholder="请输入密码" style="width: 200px;"></x-input>
+            <x-input v-model="formVal.passcode" type="password" placeholder="请输入密码" validator-icon no-border style="width: 200px;"></x-input>
           </x-form-item>
           <x-form-item prop="gender" label="性别">
             <x-radio-group v-model="formVal.gender">
@@ -24,12 +24,12 @@
             </x-checkbox-group>
           </x-form-item>
           <x-form-item prop="city" label="城市">
-            <x-select v-model="formVal.city" clearable style="width: 200px;">
+            <x-select v-model="formVal.city" clearable style="width: 200px;" :input-props="{'no-border':true}">
               <x-option v-for="item in cities" :key="item.value" :value="item.value" :label="item.label"></x-option>
             </x-select>
           </x-form-item>
           <x-form-item prop="startTime" label="开始时间">
-            <x-datepicker v-model="formVal.startTime" placeholder="选择单日" style="width: 200px;"></x-datepicker>
+            <x-datepicker v-model="formVal.startTime" placeholder="选择单日" style="width: 200px;" :input-props="{'no-border':true}"></x-datepicker>
           </x-form-item>
           <x-form-item prop="desc" label="备注">
             <x-input type="textarea" v-model="formVal.desc" placeholder="请输入备注" style="width: 200px;"></x-input>
@@ -49,7 +49,7 @@ import { xInput } from '../../vue-input/src'
 import { xButton } from '../../vue-button/src'
 import { xRadio, xRadioGroup } from '../../vue-radio/src'
 import { xCheckbox, xCheckboxGroup } from '../../vue-checkbox/src'
-import { xSelect, xOption, xOptionGroup } from '../../vue-select/src'
+import { xSelect, xOption } from '../../vue-select/src'
 import { xDatepicker } from '../../vue-datepicker/src'
 
 export default {
@@ -65,7 +65,6 @@ export default {
     xCheckboxGroup,
     xSelect,
     xOption,
-    xOptionGroup,
     xDatepicker
   },
   data () {

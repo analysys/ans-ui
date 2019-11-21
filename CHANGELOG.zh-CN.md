@@ -19,7 +19,11 @@
   - 新增 input-props 属性
 - Datepicker
   - 新增 input-props 属性
-  
+- Form
+  - 新增 vertical 属性
+- Input
+  - 新增 validator-icon 属性
+
 #### Bug 修复
 
 - Table

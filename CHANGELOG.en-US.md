@@ -19,6 +19,10 @@
   - Add input-props prop
 - Datepicker
   - Add input-props prop
+- Form
+  - Add vertical prop
+- Input
+  - Add validator-icon prop
 
 #### Bug fixes
 

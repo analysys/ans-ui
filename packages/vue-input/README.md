@@ -26,6 +26,7 @@ tabindex | 原生属性 | Number | — | —
 resize | 文本域是否可以拉伸 | String | — | —
 autosize | textarea 自适应，如 { minRows: 2, maxRows: 6 } | Boolean / Object | — | false
 rows | textarea 原生属性 | Number | — | 2
+validator-icon | 是否开启验证性的图标，在 form 表单中可开启 | Boolean | — | true
 
 ### Input slots
 

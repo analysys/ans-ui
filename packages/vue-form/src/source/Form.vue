@@ -23,6 +23,10 @@ export default {
     },
     labelHeight: {
       type: [Number, String]
+    },
+    vertical: {
+      type: Boolean,
+      default: false
     }
   },
   provide () {
@@ -36,7 +40,8 @@ export default {
   computed: {
     wrapClasses () {
       return [
-        `${prefixCls}`
+        `${prefixCls}`,
+        this.vertical ? 'vertical-form-item' : ''
       ]
     }
   },
