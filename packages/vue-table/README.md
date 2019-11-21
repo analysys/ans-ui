@@ -19,6 +19,7 @@ default-sort | 默认排序列的 prop 和顺序 | Object | { prop: String, orde
 default-sort-orders | 点击表头文字，排序规则轮转顺序，数组元素可选值：asc 表示升序，desc 表示降序，null 表示还原为原始顺序 | Array | — | ['asc', 'desc']
 default-expand-all | 是否默认展开所有行 | Boolean | — | false
 expand-row-keys | 可以通过该属性设置 Table 目前的展开行，需要设置 row-key 属性才能使用，该属性为展开行的 keys 数组 | Array | —
+hide-expand-icon | 是否隐藏展开行图标 | Boolean | — | false
 cell-span-method | 合并行或列的计算方法 | Function({ row, column, rowIndex, columnIndex }) | — | —
 row-key | 表格行的 key 值，当 reserve-states 为 true 时，必须设置该属性 | String | — | —
 current-row-key | 用于指定当前行，可以通过设置 .highlight-row 的样式来控制高亮 | String / Number | — | —

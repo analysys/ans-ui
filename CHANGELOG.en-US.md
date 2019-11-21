@@ -9,6 +9,7 @@
 - Select
   - Add ignore-case prop
 - Table
+  - Add hide-expand-icon prop
   - TableColumn add min-width prop
 - Tooltip
   - Add new option manual for triggerEvent

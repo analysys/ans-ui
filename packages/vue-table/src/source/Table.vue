@@ -276,6 +276,11 @@ export default {
 
     expandRowKeys: Array,
 
+    hideExpandIcon: {
+      type: Boolean,
+      default: false
+    },
+
     // 合并行或列的计算方法
     cellSpanMethod: Function,
 

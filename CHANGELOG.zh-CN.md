@@ -9,6 +9,7 @@
 - Select
   - 新增 ignore-case 属性
 - Table
+  - 新增 hide-expand-icon 属性
   - TableColumn 新增 min-width 属性
 - Tooltip
   - triggerEvent 新增可选值 manual

@@ -93,6 +93,9 @@ export default class TableStore {
         }
         if (column.type === 'expand') {
           states.expandable = true
+          if (this.table.hideExpandIcon) {
+            array.pop()
+          }
         }
         if (this.table.$ready) {
           this.scheduleUpdateColumns(true)
