@@ -32,37 +32,20 @@ export default {
   components: { xSelect, xOption },
   data () {
     return {
-      cities: [{
-        id: 1,
-        value: 'Beijing',
-        label: '北京-Beijing'
-      }, {
-        id: 2,
-        value: 'Shanghai',
-        label: '上海-Shanghai'
-      }, {
-        id: 3,
-        value: 'Nanjing',
-        label: '南京-Nanjing'
-      }, {
-        id: 4,
-        value: 'Chengdu',
-        label: '成都-Chengdu'
-      }, {
-        id: 5,
-        value: 'Shenzhen',
-        label: '深圳-Shenzhen'
-      }, {
-        id: 6,
-        value: 'Guangzhou',
-        label: '广州-Guangzhou'
-      }],
-      value: {
-        id: 1,
-        value: 'Beijing',
-        label: '北京-Guangzhou'
-      }
+      cities: [],
+      amount: 300
     }
+  },
+  beforeMount () {
+    const cities = []
+    for (let i = 0; i < this.amount; i++) {
+      cities.push({
+        id: i + 1,
+        value: 'city' + i,
+        label: '城市' + i
+      })
+    }
+    this.cities = cities
   }
 }
 </script>

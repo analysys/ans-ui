@@ -12,7 +12,7 @@ $scrollbar-margin: 2px;
     left: 0;
     display: inline-block;
     &.scroll-transition {
-      transition: left $transition-time, top $transition-time;
+      transition: transform $transition-time;
     }
   }
   .#{$lib-name}-v-scrollbar,
@@ -26,7 +26,7 @@ $scrollbar-margin: 2px;
       background: $border-color-base;
       transition: background-color $transition-time;
       &.scroll-transition {
-        transition: left $transition-time, top $transition-time;
+        transition: transform $transition-time;
       }
       cursor: pointer;
       &:hover {

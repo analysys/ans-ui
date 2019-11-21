@@ -2,7 +2,7 @@
 
 ### 1.1.0
 
-*2019-11-20*
+_2019-11-20_
 
 #### 新特性
 
@@ -38,3 +38,5 @@
 
 - Tooltip
   - maxWidth 的默认值改为 370px
+- Scroller
+  - 将 left/top 替换为 translate 变换
