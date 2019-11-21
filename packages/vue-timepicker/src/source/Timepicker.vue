@@ -29,6 +29,7 @@
           :prefix-icon="prefixIcon"
           :size="size"
           :readonly="readonly"
+          v-bind="inputProps"
           @on-blur="blur"
           @input="pattern = 'edit'"
         ></x-input>
@@ -99,6 +100,13 @@ export default {
       type: String,
       default () {
         return t('ans.timepicker.placeholder')
+      }
+    },
+
+    inputProps: {
+      type: Object,
+      default () {
+        return {}
       }
     },
 

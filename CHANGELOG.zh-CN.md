@@ -16,7 +16,10 @@
   - 新增 reveal 属性
 - Timepicker
   - 新增 step 属性
-
+  - 新增 input-props 属性
+- Datepicker
+  - 新增 input-props 属性
+  
 #### Bug 修复
 
 - Table

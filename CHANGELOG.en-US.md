@@ -16,6 +16,9 @@
   - Add reveal prop
 - Timepicker
   - Add step prop
+  - Add input-props prop
+- Datepicker
+  - Add input-props prop
 
 #### Bug fixes
 
