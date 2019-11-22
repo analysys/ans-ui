@@ -59,7 +59,6 @@ export default class TableStore {
       startRowIndex: 0,
       endRowIndex: null,
       startColumnIndex: 0,
-      transformBodyY: false,
       transformXAmount: 0,
       transformYAmount: 0,
       contentHeight: null,
@@ -501,7 +500,6 @@ export default class TableStore {
           rowCount = Math.ceil(layout.bodyHeight / rowHeight)
         }
 
-        states.transformBodyY = rowCount < states._mappedData.length
         states.rowLimit = states.firstRowSpan !== 1
           ? (Math.ceil(rowCount / states.firstRowSpan) + 1) * states.firstRowSpan
           : rowCount + 6
@@ -514,7 +512,6 @@ export default class TableStore {
       }
     }
     states._slicedData = Object.freeze(states._mappedData.slice())
-    states.transformBodyY = false
     this.calculateColumnIndexes()
   }
 
