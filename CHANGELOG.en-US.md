@@ -40,3 +40,5 @@
   - Change maxWidth default value to 370px
 - Scroller
   - Change left/top to translate
+- Table
+  - Optimize sort click experience

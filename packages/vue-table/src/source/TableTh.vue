@@ -56,9 +56,9 @@
             :class="{'sortable-column':column.sortable}"
             @click="column.sortable && store.commit('sortConditionChanged', column)"
           >{{column.label}}</span>
-          <span v-if="column.sortable" class="column-order-area">
-            <i class="ascending-order" @click="store.commit('sortConditionChanged', column, true)"></i>
-            <i class="descending-order" @click="store.commit('sortConditionChanged', column, false)"></i>
+          <span v-if="column.sortable" class="column-order-area" @click="store.commit('sortConditionChanged', column)">
+            <i class="ascending-order"></i>
+            <i class="descending-order"></i>
           </span>
           <x-cell-renderer
             v-if="column.appendHeader"

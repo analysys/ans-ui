@@ -150,7 +150,8 @@ $order-triangle-height: 4px;
       flex-direction: column;
       justify-content: space-between;
       height: 18px;
-      margin: 0 8px;
+      padding: 0 8px;
+      cursor: pointer;
       .ascending-order,
       .descending-order {
         cursor: pointer;

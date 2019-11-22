@@ -40,3 +40,5 @@ _2019-11-20_
   - maxWidth 的默认值改为 370px
 - Scroller
   - 将 left/top 替换为 translate 变换
+- Table
+  - 优化排序点击体验
