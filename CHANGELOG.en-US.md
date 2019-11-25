@@ -1,5 +1,12 @@
 ## Changelog
 
+### 1.1.3
+
+*2019-11-25*
+
+- Datepicker
+  - Fix the selected date not highlighted
+
 ### 1.1.0
 
 *2019-11-22*
