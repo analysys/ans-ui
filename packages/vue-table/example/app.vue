@@ -2,7 +2,7 @@
   <div style="margin-bottom: 20px;">
     <section class="demo-section">
       <h4>基本用法</h4>
-      <x-table :data="tableData">
+      <x-table :data="[]">
         <x-table-column
           v-for="(header, index) in tableHeaders"
           :key="index"
@@ -62,7 +62,8 @@
           v-for="(header, index) in detailTableHeaders"
           :fixed="index === 3 ? 'right' : index === 1 ? 'left' : false"
           :key="index"
-          width="300"
+          :min-width="index > 2 ? 400 : undefined"
+          :width="index <= 2 ? 200 : undefined"
           :label="header.label"
           :prop="header.prop">
         </x-table-column>

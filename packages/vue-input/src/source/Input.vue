@@ -60,7 +60,7 @@
         <slot v-if="$slots.suffix" name="suffix"></slot>
         <template v-else>
           <i v-if="clearable" v-show="showClear" class="icon ans-icon-fail-solid close"></i>
-          <i v-else class="icon" :class="suffixIcon"></i>
+          <i v-else class="icon" :class="suffixIcon || innerIcon"></i>
         </template>
       </span>
       <!-- 后置元素 -->
@@ -129,7 +129,9 @@ export default {
       // 是否处于聚焦状态
       focused: false,
       // 是否处于中文输入中
-      isOnComposition: false
+      isOnComposition: false,
+      // 用于表单验证结果的图标
+      innerIcon: ''
     }
   },
   props: {
@@ -194,7 +196,12 @@ export default {
       default: false
     },
     // textarea 原生属性，与 submit 相关
-    minlength: Number
+    minlength: Number,
+    // 是否开启验证性的图标，在 form 表单中可开启
+    validatorIcon: {
+      type: Boolean,
+      default: true
+    }
   },
   computed: {
     // 当前文本域样式
@@ -212,7 +219,7 @@ export default {
     },
     // 是否存在后置图标
     hasSuffix () {
-      return this.suffixIcon || this.clearable || this.$slots.suffix
+      return this.suffixIcon || this.clearable || this.$slots.suffix || this.validatorIcon
     },
     isNotTextarea () {
       return this.type !== 'textarea'
@@ -248,7 +255,17 @@ export default {
       this.focused = false
       this.$emit('on-blur', e)
       if (!findComponentUpward(this, ['xDatepicker', 'xTimePicker', 'xCascader', 'xSelect'])) {
-        this.dispatch('xFormItem', 'on-form-blur', this.currentValue)
+        this.dispatch('xFormItem', 'on-form-blur', this)
+      }
+    },
+    // 根据表单验证的结果显示图标
+    handleValidate (error) {
+      if (this.validatorIcon) {
+        if (error) {
+          this.innerIcon = `${LIB_NAME}-icon-fail-solid fail-color`
+        } else {
+          this.innerIcon = `${LIB_NAME}-icon-success-solid success-color`
+        }
       }
     },
     /**

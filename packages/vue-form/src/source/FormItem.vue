@@ -20,7 +20,7 @@ import AsyncValidator from 'async-validator'
 
 const prefixCls = `${LIB_NAME}-form-item`
 
-// 根据path获取数据
+// 根据 path 获取数据
 function getPropByPath (obj, path) {
   let tempObj = obj
 
@@ -91,9 +91,13 @@ export default {
     },
     // label样式
     labelClasses () {
-      return [
+      const classes = [
         `${prefixCls}-label`
       ]
+      if (this.validateState === 'error') {
+        classes.push('form-item-error')
+      }
+      return classes
     },
     // content样式
     contentClasses () {
@@ -186,8 +190,8 @@ export default {
 
       this.validateDisabled = false
     },
-    onFieldBlur () {
-      this.validate('blur')
+    onFieldBlur (input) {
+      this.validate('blur', input.handleValidate)
     },
     onFieldChange () {
       if (this.validateDisabled) {
@@ -235,11 +239,11 @@ export default {
       const rules = this.getRules()
 
       if (rules.length || this.required !== undefined) {
-        // 监听vue组件的blur & change事件
+        // 监听 vue 组件的 blur & change 事件
         this.$on('on-form-blur', this.onFieldBlur)
         this.$on('on-form-change', this.onFieldChange)
 
-        // 对于非vue组件的事件监听
+        // 对于非 vue 组件的事件监听
         this.$slots.input && this.$slots.input[0].elm.addEventListener('blur', this.onFieldBlur)
         this.$slots.select && this.$slots.select[0].elm.addEventListener('blur', this.onFieldBlur)
         this.$slots.select && this.$slots.select[0].elm.addEventListener('change', this.onFieldChange)

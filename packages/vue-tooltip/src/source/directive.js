@@ -21,7 +21,7 @@ export default {
       placement,
       triggerEvent: click ? 'click' : 'mouseenter',
       theme: light ? 'light' : 'dark',
-      maxWidth: '200px',
+      maxWidth: '370px',
       positionFixed: !!fixed,
       viewport: !!viewport,
       large: !!large
@@ -46,8 +46,12 @@ export default {
         this._ttInstance.hide()
       }
     }
-    el.addEventListener(options.triggerEvent, el._appearHandler)
-    el.addEventListener('mouseleave', el._vanishHandler)
+    if (options.triggerEvent === 'manual') {
+      el._ttInstance = factory(options)
+    } else {
+      el.addEventListener(options.triggerEvent, el._appearHandler)
+      el.addEventListener('mouseleave', el._vanishHandler)
+    }
   },
 
   update (el, binding) {

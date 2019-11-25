@@ -8,7 +8,7 @@
         :class="{'scroll-transition':!dragging}"
         :style="{
           height: height ? height + 'px' : 0,
-          top: top ? top + 'px' : 0
+          transform: 'translateY(' + top + 'px)'
         }"
         @mousedown="startDrag"
         @touchstart="startDrag"></div>

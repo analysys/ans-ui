@@ -19,6 +19,7 @@ default-sort | 默认排序列的 prop 和顺序 | Object | { prop: String, orde
 default-sort-orders | 点击表头文字，排序规则轮转顺序，数组元素可选值：asc 表示升序，desc 表示降序，null 表示还原为原始顺序 | Array | — | ['asc', 'desc']
 default-expand-all | 是否默认展开所有行 | Boolean | — | false
 expand-row-keys | 可以通过该属性设置 Table 目前的展开行，需要设置 row-key 属性才能使用，该属性为展开行的 keys 数组 | Array | —
+hide-expand-icon | 是否隐藏展开行图标 | Boolean | — | false
 cell-span-method | 合并行或列的计算方法 | Function({ row, column, rowIndex, columnIndex }) | — | —
 row-key | 表格行的 key 值，当 reserve-states 为 true 时，必须设置该属性 | String | — | —
 current-row-key | 用于指定当前行，可以通过设置 .highlight-row 的样式来控制高亮 | String / Number | — | —
@@ -70,6 +71,7 @@ type | 列的类型 | String | selection / expand | —
 label | 表头内容 | String | — | —
 prop | 表格内容对应的属性，支持多层访问：如 'user.address[0].city' | String | — | —
 width | 列宽，单位为 px(只支持数值型的格式，如 400) | Number / String | — | —
+min-width | 最小列宽，单位为 px(只支持数值型的格式，如 400) | Number / String | — | —
 fixed | 是否固定列，true 等价于 left | Boolean / String | true / left / right | false
 sortable | 对应列是否可以排序，如果设置为 'custom'，则代表用户希望自定义排序，需要监听 Table 的 on-sort-change 事件 | Boolean / String | true / false / 'custom' | false
 sort-method | 对数据进行排序的时候使用的方法，仅当 sortable 设置为 true 的时候有效，需返回一个数字，和 Array.sort 表现一致 | Function(cellA, cellB, rowA, rowB) | — | —

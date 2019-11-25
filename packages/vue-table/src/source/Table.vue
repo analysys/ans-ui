@@ -276,6 +276,11 @@ export default {
 
     expandRowKeys: Array,
 
+    hideExpandIcon: {
+      type: Boolean,
+      default: false
+    },
+
     // 合并行或列的计算方法
     cellSpanMethod: Function,
 
@@ -451,7 +456,7 @@ export default {
     },
 
     scrollerContentHeight () {
-      return this.store.states.transformBodyY ? this.store.states.contentHeight + 'px' : undefined
+      return this.store.states.transformYAmount ? this.store.states.contentHeight + 'px' : undefined
     },
 
     transformX () {
@@ -467,7 +472,7 @@ export default {
       if (this.virtualScroll) {
         result['will-change'] = 'transform'
         const x = this.transformX
-        if (this.store.states.transformBodyY) {
+        if (this.store.states.transformYAmount) {
           result.transform = `translate(${x}px, ${this.translateY}px)`
         } else {
           result.transform = `translateX(${x}px)`
@@ -478,7 +483,7 @@ export default {
 
     fixedBodyStyles () {
       const result = {}
-      if (this.store.states.transformBodyY) {
+      if (this.store.states.transformYAmount) {
         result['will-change'] = 'transform'
         result.transform = `translateY(${this.translateY}px)`
       }

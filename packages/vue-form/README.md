@@ -10,6 +10,7 @@ model | 表单数据对象 | Object | - | -
 rules | 表单验证规则，详见`async-validator` | Object | - | -
 label-width | 表单域标签的的宽度 | Number / String | - | -
 label-height | 表单域标签的的高度 | Number / String | - | -
+vertical | 表单的标签和元素是否上下结构 | Boolean | - | false
 
 ### Form methods
 

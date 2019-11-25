@@ -59,7 +59,6 @@ export default class TableStore {
       startRowIndex: 0,
       endRowIndex: null,
       startColumnIndex: 0,
-      transformBodyY: false,
       transformXAmount: 0,
       transformYAmount: 0,
       contentHeight: null,
@@ -93,6 +92,9 @@ export default class TableStore {
         }
         if (column.type === 'expand') {
           states.expandable = true
+          if (this.table.hideExpandIcon) {
+            array.pop()
+          }
         }
         if (this.table.$ready) {
           this.scheduleUpdateColumns(true)
@@ -498,7 +500,6 @@ export default class TableStore {
           rowCount = Math.ceil(layout.bodyHeight / rowHeight)
         }
 
-        states.transformBodyY = rowCount < states._mappedData.length
         states.rowLimit = states.firstRowSpan !== 1
           ? (Math.ceil(rowCount / states.firstRowSpan) + 1) * states.firstRowSpan
           : rowCount + 6
@@ -511,7 +512,6 @@ export default class TableStore {
       }
     }
     states._slicedData = Object.freeze(states._mappedData.slice())
-    states.transformBodyY = false
     this.calculateColumnIndexes()
   }
 
@@ -582,6 +582,9 @@ export default class TableStore {
 
     if (!states._slicedData || !states._slicedData.length) {
       states.data = []
+      states.renderedColumns = Object.freeze(states.columns)
+      states.renderedColColumns = Object.freeze(states.colColumns)
+      states.renderedColumnCount = states.renderedColColumns.length
       Vue.nextTick(() => {
         this.table.layout.notifyObservers('columns')
         this.table.debouncedCheckScrollable()
@@ -644,9 +647,8 @@ export default class TableStore {
               }
             }
           } else {
-            startIndex = i
+            startIndex = Math.max(0, i - 2)
           }
-          startIndex = Math.max(0, startIndex - 2)
           findStart = true
         }
       } else {
@@ -659,9 +661,8 @@ export default class TableStore {
             }
             endIndex = notFixedColumns.indexOf(parent)
           } else {
-            endIndex = i
+            endIndex = i + 2
           }
-          endIndex += 2
           break
         }
       }

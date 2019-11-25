@@ -13,7 +13,7 @@
       </div>
       <div class="x-date-packer-day-day">
         <label class="lattice" v-for="i in weeks" :key="i"></label><span class="lattice em" v-for="d in days" v-attr="hoverDate(d)" @click="selected(d, $event)"
-                                                                :key="i + '-' + d" @mouseover="hover(d, $event)" :class="{'picker-disabled': getDisabledDate(d)}">
+                                                                :key="uuId()" @mouseover="hover(d, $event)" :class="{'picker-disabled': getDisabledDate(d)}">
           <label :data-mouseover="year + '-' + month + '-' + d" class="dataMouseoverAct"><em :data-today="today(d)" :data-select="selectDay(d)">{{d}}</em></label>
         </span>
       </div>
@@ -38,13 +38,12 @@ for (let i = 10; i < 100; i++) {
 }
 
 const WEEKS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
-const daysInWeek = WEEKS.map(w => t(`ans.datepicker.weeks.${w}`))
 
 export default {
   components: { ym },
   data () {
     return {
-      week: daysInWeek,
+      week: WEEKS.map(w => t(`ans.datepicker.weeks.${w}`)),
 
       // 本月一号星期几
       weeks: 0,

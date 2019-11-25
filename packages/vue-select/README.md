@@ -22,7 +22,8 @@ filterable | 是否开启搜索功能 | Boolean | — | false
 filter-props | 当 option 的绑定值为对象时，搜索查找的对应属性列表 | Array | — | —
 no-data-text | 选项为空时显示的文字 | String | — | 暂无数据
 no-data-icon | 选项为空时显示的图标类名 | String | — | ans-icon-no-data
-highlight-matched-text | 搜索时是否高亮选项中匹配的文字，(仅当未设置 filter-props 时可用) | Boolean | — | false
+highlight-matched-text | 搜索时是否高亮选项中匹配的文字 | Boolean | — | false
+ignore-case | 搜索时是否忽略大小写，可以和 filter-props 以及 highlight-matched-text 配合使用 | Boolean | — | false
 no-match-text | 搜索没有任何匹配项时显示的文字 | String | — | 搜索无结果
 no-match-icon | 搜索没有任何匹配项时显示的图标类名 | String | — | ans-icon-search-no-data
 has-arrow | 下拉框是否显示指示箭头 | Boolean | — | false

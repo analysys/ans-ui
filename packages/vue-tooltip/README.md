@@ -20,12 +20,13 @@ large | 是否启用大号提示
 --- | --- | --- | --- | ---
 text | 提示文本，支持标签 | String | — | —
 placement | 提示优先出现方位 | 详见popper.js文档 | top
-triggerEvent | 触发提示事件 | String | click / mouseenter | mouseenter
+triggerEvent | 触发提示事件 | String | click / mouseenter / manual | mouseenter
 theme | 主题 | String | light / dark | dark
 maxWidth | 提示内容最大宽度，超过该宽度换行 | String | — | 200px
 positionFixed | 同 fixed 修饰符 | Boolean | — | false
 viewport | 同 viewport 修饰符 | Boolean | — | false
 large | 同 large 修饰符 | Boolean | — | false
+reveal | 当 triggerEvent 为 `manual` 的时候，控制 tooltip 是否显示 | Boolean | — | false
 
 ### Tooltip 方法
 

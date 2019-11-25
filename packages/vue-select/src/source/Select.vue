@@ -229,6 +229,12 @@ export default {
       default: false
     },
 
+    // 搜索时是否忽略大小写
+    ignoreCase: {
+      type: Boolean,
+      default: false
+    },
+
     // 搜索没有任何匹配项时显示的文字
     noMatchText: {
       type: String,

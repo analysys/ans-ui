@@ -15,11 +15,11 @@ $form-item-name: $lib-name + "-form-item";
       text-align: right;
       vertical-align: middle;
       box-sizing: border-box;
-      font-size: 12px;
-      color: $title-color-light;
+      font-size: 14px;
+      color: $sub-text-color-light;
       height: 32px;
       line-height: 32px;
-      padding: 0 8px;
+      padding-right: 16px;
     }
     .#{$form-item-name}-content {
       .#{$lib-name}-radio-group,
@@ -27,9 +27,28 @@ $form-item-name: $lib-name + "-form-item";
         line-height: 32px;
       }
       .#{$form-item-name}-error-tip {
-        margin-top: 3px;
+        margin: 6px 0 0;
         font-size: 12px;
         color: $error-color;
+      }
+      &.form-item-error {
+        .input-element.no-border {
+          border-bottom-color: $error-color;
+        }
+        .input-element:not(.no-border) {
+          border-color: $error-color;
+        }
+      }
+    }
+  }
+  &.vertical-form-item {
+    .#{$form-item-name} {
+      flex-direction: column;
+      .#{$form-item-name}-label {
+        text-align: left;
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px;
       }
     }
   }

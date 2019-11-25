@@ -9,10 +9,11 @@
     :popper-options="popperOptions"
     ref="datepickerPoptip"
     @on-hide="pickerPoptipHide"
-    @on-show="pickerPoptipShow">
+    @on-show="pickerPoptipShow"
+  >
     <div slot="reference">
       <slot name="input" :placeholder="placeholder" :value="text" :suffix-icon="suffixIcon" :prefix-icon="prefixIcon" :disabled="disabled" :size="size" :readonly="readonly">
-        <x-input :value="text" :clearable="clearable" :placeholder="placeholder" :suffix-icon="suffixIcon" :prefix-icon="prefixIcon" :size="size" :readonly="readonly" @on-clear="empty"></x-input>
+        <x-input v-bind="inputProps" :value="text" :clearable="clearable" :placeholder="placeholder" :suffix-icon="suffixIcon" :prefix-icon="prefixIcon" :size="size" :readonly="readonly" @on-clear="empty"></x-input>
       </slot>
     </div>
 
@@ -150,6 +151,13 @@ export default {
       type: String,
       default () {
         return t('ans.datepicker.placeholder')
+      }
+    },
+
+    inputProps: {
+      type: Object,
+      default () {
+        return {}
       }
     },
 

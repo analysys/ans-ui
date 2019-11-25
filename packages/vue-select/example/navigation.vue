@@ -3,7 +3,14 @@
     <section class="demo-section">
       <h4>键盘导航</h4>
       <div>
-        <x-select v-model="value" value-key="id" filterable height="150" highlight-matched-text>
+        <x-select
+          multiple
+          filterable
+          height="150"
+          highlight-matched-text
+          ignore-case
+          :filter-props="['label', 'value']"
+        >
           <x-option
             v-for="city in cities"
             :key="city.value"
@@ -25,37 +32,20 @@ export default {
   components: { xSelect, xOption },
   data () {
     return {
-      cities: [{
-        id: 1,
-        value: 'Beijing',
-        label: '北京'
-      }, {
-        id: 2,
-        value: 'Shanghai',
-        label: '上海'
-      }, {
-        id: 3,
-        value: 'Nanjing',
-        label: '南京'
-      }, {
-        id: 4,
-        value: 'Chengdu',
-        label: '成都'
-      }, {
-        id: 5,
-        value: 'Shenzhen',
-        label: '深圳'
-      }, {
-        id: 6,
-        value: 'Guangzhou',
-        label: '广州'
-      }],
-      value: {
-        id: 1,
-        value: 'Beijing',
-        label: '北京'
-      }
+      cities: [],
+      amount: 300
     }
+  },
+  beforeMount () {
+    const cities = []
+    for (let i = 0; i < this.amount; i++) {
+      cities.push({
+        id: i + 1,
+        value: 'city' + i,
+        label: '城市' + i
+      })
+    }
+    this.cities = cities
   }
 }
 </script>

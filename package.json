@@ -1,6 +1,6 @@
 {
   "name": "ans-ui",
-  "version": "1.0.2",
+  "version": "1.1.3",
   "description": "A vue-based UI components library for analysys",
   "main": "lib/ans-ui.min.js",
   "style": "lib/ans-ui.min.css",
