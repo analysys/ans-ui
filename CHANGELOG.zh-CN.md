@@ -6,7 +6,9 @@
 
 - Cascader
   - 新增 only-show-last 属性
-
+- Page
+  - 新增 on-size-change 事件
+  
 ### 1.1.3
 
 *2019-11-25*

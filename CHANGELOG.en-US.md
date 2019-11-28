@@ -6,6 +6,8 @@
 
 - Cascader
   - Add only-show-last prop
+- Page
+  - Add on-size-change event
 
 ### 1.1.3
 
