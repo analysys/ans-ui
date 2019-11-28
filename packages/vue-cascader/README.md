@@ -24,6 +24,7 @@
 | position-fixed | 弹出层是否 fixed 定位 | Boolean | — | false |
 | viewport | 弹出层是否基于 viewport 定位 | Boolean | — | false |
 | popper-options | Popper.js 的可选项 | Optional | Object | — |
+| only-show-last | 是否只展示最后一级的值 | Optional | Boolean | — |
 
 ### Cascader events
 
