@@ -198,7 +198,9 @@ export default {
       default: '/'
     },
     popperClass: String,
-    multiple: Boolean
+    multiple: Boolean,
+    // 只展示最后一级的值
+    onlyShowLast: Boolean
   },
   watch: {
     value: {
@@ -250,7 +252,7 @@ export default {
           : this.selected[i].label
         label.push(item)
       }
-      return this.multiple ? '' : label.join(this.separator)
+      return this.multiple ? '' : this.onlyShowLast ? label[label.length - 1] : label.join(this.separator)
     },
 
     // filter list

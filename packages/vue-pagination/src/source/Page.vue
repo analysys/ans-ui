@@ -281,7 +281,8 @@ export default {
       this.currentPage = v
     },
 
-    currentPageSize () {
+    currentPageSize (v) {
+      this.$emit('on-size-change', v)
       if (this.currentPage > this.lastPage) {
         this.changePage(this.lastPage)
       }

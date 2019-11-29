@@ -1,5 +1,14 @@
 ## Changelog
 
+### 1.1.4
+
+*2019-11-28*
+
+- Cascader
+  - Add only-show-last prop
+- Page
+  - Add on-size-change event
+
 ### 1.1.3
 
 *2019-11-25*

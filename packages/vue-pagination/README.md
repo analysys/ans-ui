@@ -21,4 +21,5 @@ small | 是否显示迷你版 | Boolean | - | false
 
 事件名称 | 说明 | 返回值
 --- | --- | ---
+on-size-change | pageSize 改变时会触发 | 每页条数
 on-change | 页码切换时触发 | 返回当前页码
