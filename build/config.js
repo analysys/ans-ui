@@ -37,8 +37,7 @@ const baseConfig = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          publicPath: resolve('lib'),
-          name: 'font/[name].[hash:7].[ext]'
+          name: 'font/[name].[ext]'
         }
       },
       {

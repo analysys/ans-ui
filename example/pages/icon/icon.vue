@@ -17,8 +17,8 @@
             <td><i class="ans-icon-close"></i><div>close</div></td>
             <td><i class="ans-icon-calendar"></i><div>calendar</div></td>
             <td><i class="ans-icon-search"></i><div>search</div></td>
+            <td><i class="ans-icon-filter"></i><div>filter</div></td>
             <td><i class="ans-icon-more"></i><div>more</div></td>
-            <td><i class="ans-icon-off"></i><div>off</div></td>
           </tr>
           <tr>
             <td><i class="ans-icon-success-solid"></i><div>success-solid</div></td>
@@ -32,8 +32,40 @@
             <td><i class="ans-icon-notice-solid"></i><div>notice-solid</div></td>
             <td><i class="ans-icon-notice-empty"></i><div>notice-empty</div></td>
             <td><i class="ans-icon-spinner"></i><div>spinner</div></td>
+            <td><i class="ans-icon-off"></i><div>off</div></td>
             <td><i class="ans-icon-no-data"></i><div>no-data</div></td>
             <td><i class="ans-icon-search-no-data"></i><div>search-no-data</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-increase"></i><div>increase</div></td>
+            <td><i class="ans-icon-reduce"></i><div>reduce</div></td>
+            <td><i class="ans-icon-eye"></i><div>eye</div></td>
+            <td><i class="ans-icon-amount-asc"></i><div>amount-asc</div></td>
+            <td><i class="ans-icon-amount-desc"></i><div>amount-desc</div></td>
+            <td><i class="ans-icon-edit"></i><div>edit</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-download"></i><div>download</div></td>
+            <td><i class="ans-icon-trash"></i><div>trash</div></td>
+            <td><i class="ans-icon-refresh"></i><div>refresh</div></td>
+            <td><i class="ans-icon-play"></i><div>play</div></td>
+            <td><i class="ans-icon-pause"></i><div>pause</div></td>
+            <td><i class="ans-icon-stop"></i><div>stop</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-downward"></i><div>downward</div></td>
+            <td><i class="ans-icon-upward"></i><div>upward</div></td>
+            <td><i class="ans-icon-user-empty"></i><div>user-empty</div></td>
+            <td><i class="ans-icon-user-solid"></i><div>user-solid</div></td>
+            <td><i class="ans-icon-datetime"></i><div>datetime</div></td>
+            <td><i class="ans-icon-timer"></i><div>timer</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-log"></i><div>log</div></td>
+            <td><i class="ans-icon-node"></i><div>node</div></td>
+            <td><i class="ans-icon-pen"></i><div>refresh</div></td>
+            <td><i class="ans-icon-paper"></i><div>play</div></td>
+            <td><i class="ans-icon-gantt"></i><div>pause</div></td>
           </tr>
         </table>
       </div>
