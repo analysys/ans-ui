@@ -63,9 +63,61 @@
           <tr>
             <td><i class="ans-icon-log"></i><div>log</div></td>
             <td><i class="ans-icon-node"></i><div>node</div></td>
-            <td><i class="ans-icon-pen"></i><div>refresh</div></td>
-            <td><i class="ans-icon-paper"></i><div>play</div></td>
-            <td><i class="ans-icon-gantt"></i><div>pause</div></td>
+            <td><i class="ans-icon-pen"></i><div>pen</div></td>
+            <td><i class="ans-icon-paper"></i><div>paper</div></td>
+            <td><i class="ans-icon-gantt"></i><div>gantt</div></td>
+            <td><i class="ans-icon-monitor"></i><div>monitor</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-shield"></i><div>shield</div></td>
+            <td><i class="ans-icon-slash"></i><div>slash</div></td>
+            <td><i class="ans-icon-copy"></i><div>copy</div></td>
+            <td><i class="ans-icon-menu"></i><div>menu</div></td>
+            <td><i class="ans-icon-clock"></i><div>clock</div></td>
+            <td><i class="ans-icon-gear"></i><div>gear</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-line-arrow-up"></i><div>line-arrow-up</div></td>
+            <td><i class="ans-icon-line-arrow-down"></i><div>line-arrow-down</div></td>
+            <td><i class="ans-icon-documents"></i><div>documents</div></td>
+            <td><i class="ans-icon-group"></i><div>group</div></td>
+            <td><i class="ans-icon-spinner2"></i><div>spinner2</div></td>
+            <td><i class="ans-icon-user-circle-solid"></i><div>user-circle-solid</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-document"></i><div>document</div></td>
+            <td><i class="ans-icon-recycle"></i><div>recycle</div></td>
+            <td><i class="ans-icon-danger-solid"></i><div>danger-solid</div></td>
+            <td><i class="ans-icon-triangle-solid-right"></i><div>triangle-solid-right</div></td>
+            <td><i class="ans-icon-save"></i><div>save</div></td>
+            <td><i class="ans-icon-diary"></i><div>diary</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-arrow-circle-right"></i><div>arrow-circle-right</div></td>
+            <td><i class="ans-icon-code"></i><div>code</div></td>
+            <td><i class="ans-icon-forbidden"></i><div>forbidden</div></td>
+            <td><i class="ans-icon-minus-circle-empty"></i><div>minus-circle-empty</div></td>
+            <td><i class="ans-icon-max"></i><div>max</div></td>
+            <td><i class="ans-icon-min"></i><div>min</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-upload"></i><div>upload</div></td>
+            <td><i class="ans-icon-sand-clock"></i><div>sand-clock</div></td>
+            <td><i class="ans-icon-pointer"></i><div>pointer</div></td>
+            <td><i class="ans-icon-home-empty"></i><div>home-empty</div></td>
+            <td><i class="ans-icon-home-solid"></i><div>home-solid</div></td>
+            <td><i class="ans-icon-folder-empty"></i><div>folder-empty</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-coin"></i><div>coin</div></td>
+            <td><i class="ans-icon-dependence"></i><div>dependence</div></td>
+            <td><i class="ans-icon-setting"></i><div>setting</div></td>
+            <td><i class="ans-icon-key"></i><div>key</div></td>
+            <td><i class="ans-icon-dot-circle"></i><div>dot-circle</div></td>
+            <td><i class="ans-icon-file-download"></i><div>file-download</div></td>
+          </tr>
+          <tr>
+            <td><i class="ans-icon-pause-solid"></i><div>pause-solid</div></td>
           </tr>
         </table>
       </div>
