@@ -118,6 +118,9 @@
           </tr>
           <tr>
             <td><i class="ans-icon-pause-solid"></i><div>pause-solid</div></td>
+            <td><i class="ans-icon-circle-solid"></i><div>circle-solid</div></td>
+            <td><i class="ans-icon-rect-solid"></i><div>rect-solid</div></td>
+            <td><i class="ans-icon-database"></i><div>database</div></td>
           </tr>
         </table>
       </div>
