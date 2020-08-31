@@ -658,7 +658,7 @@ export default {
      */
     setSelected (value) {
       this.clearAll()
-      if (value) {
+      if (value !== undefined && value !== null && value !== '') {
         if (this.multiple) {
           const list = Array.isArray(value) ? value : [value]
           list.forEach(v => this.selectedOptions.push(this.getOption(v)))
